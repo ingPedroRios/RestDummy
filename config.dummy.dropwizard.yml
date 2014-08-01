@@ -1,0 +1,81 @@
+#VARIABLES DE PROPIEDAD
+nombreAlumno : Pedro
+claveAlumno : 002
+calificacion : 9.3
+
+#CONFIGURACIÓN DE PUERTOS AL ARANCAR EL SERVICIO REST
+server:
+  applicationConnectors:
+  - type: http
+    port: 8081
+  adminConnectors:
+  - type: http
+    port: 8082
+
+#CONFIGURACIÓN DE LOG
+logging:
+
+  # Permit DEBUG, INFO, WARN and ERROR messages to be logged by appenders.
+  level: DEBUG
+
+  appenders:
+    # Log warnings and errors to stderr
+    - type: console
+      threshold: DEBUG
+      target: stderr
+
+    # Log info, warnings and errors to our apps' main log.
+    # Rolled over daily and retained for 5 days.
+    - type: file
+      threshold: DEBUG
+      currentLogFilename: /home/logs/example-rest.dummy.log
+      archivedLogFilenamePattern: /home/logs/example-rest-dummy-%d.log.gz
+      archivedFileCount: 5
+
+    # Log debug messages, info, warnings and errors to our apps' debug log.
+    # Rolled over hourly and retained for 6 hours
+    - type: file
+      threshold: DEBUG
+      currentLogFilename: /home/logs/rest-dummy-debug.log
+      archivedLogFilenamePattern: /logs/home/rest-dummy-debug-%d{yyyy-MM-dd-hh}.log.gz
+      archivedFileCount: 6
+
+
+database:
+  # the name of your JDBC driver
+  driverClass: com.mysql.jdbc.Driver
+
+  # the username
+  user: dropwizard
+
+  # the password
+  password: 123456
+
+  # the JDBC URL
+  url: jdbc:mysql://127.0.0.1:3306/alumno?autoReconnect=true
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: SELECT 1
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 32
+
+  # whether or not idle connections should be validated
+  checkConnectionWhileIdle: false
+
+  # the amount of time to sleep between runs of the idle connection validation, abandoned cleaner and idle pool resizing
+  evictionInterval: 10s
+
+  # the minimum amount of time an connection must sit idle in the pool before it is eligible for eviction
+  minIdleTime: 1 minute
+

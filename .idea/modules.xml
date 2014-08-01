@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard.iml" filepath="$PROJECT_DIR$/dummy-dropwizard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard-api/dummy-dropwizard-api.iml" filepath="$PROJECT_DIR$/dummy-dropwizard-api/dummy-dropwizard-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard-bo/dummy-dropwizard-bo.iml" filepath="$PROJECT_DIR$/dummy-dropwizard-bo/dummy-dropwizard-bo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard-client/dummy-dropwizard-client.iml" filepath="$PROJECT_DIR$/dummy-dropwizard-client/dummy-dropwizard-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard-db/dummy-dropwizard-db.iml" filepath="$PROJECT_DIR$/dummy-dropwizard-db/dummy-dropwizard-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard-service/dummy-dropwizard-service.iml" filepath="$PROJECT_DIR$/dummy-dropwizard-service/dummy-dropwizard-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dummy-dropwizard-test/dummy-dropwizard-test.iml" filepath="$PROJECT_DIR$/dummy-dropwizard-test/dummy-dropwizard-test.iml" />
+    </modules>
+  </component>
+</project>
+
